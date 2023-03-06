@@ -6,5 +6,10 @@ pipeline{
                 git branch: 'main', credentialsId: 'raji_git', url: 'https://github.com/rajeeb007/lastautomation.git'
             }
         }
+        stage('UNIT test'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
